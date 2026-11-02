@@ -1,0 +1,47 @@
+name: Beta feedback or bug
+description: Tell us what worked, what didn't, or what went wrong in Atlas Free.
+labels: ["beta-feedback"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Issues here are public. **Do not paste emails, passwords, tokens, account names or anything else personal.**
+        Security problems go to atlas@titanatlas.live, not here.
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - macOS 0.1.6 (Apple silicon)
+        - Ubuntu 0.1.5 (amd64)
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: Operating system version
+      placeholder: e.g. macOS 15.4, Ubuntu 24.04
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what you saw instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1.
+        2.
+        3.
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Privacy
+      options:
+        - label: This issue contains no emails, passwords, tokens or other personal data.
+          required: true
